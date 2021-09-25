@@ -1,0 +1,397 @@
+<!-- Deklaracja typu dokumentu - zawsze na pierwszym miejscu, przeglądarka określa typ dokumentu i rozpoczyna interpretację -->
+<!DOCTYPE html> 
+
+<!-- Deklaracja języka i kraju, w którym się tego języka używa (np. fr-CA) -->
+<html lang="pl-PL">
+
+<!-- W head znajdują się podstawowe informacje o dokumencie, ale zawartość tego tagu nie jest fizycznie widoczna na stronie -->
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="keyword" content="html, css, kurs">
+    
+    <title>Dzień 2</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+<!-- W body mamy wszystkie elementy, które będą się wyświetlały na stronie -->
+<body>
+
+    <!-- Stylowanie w pliku index.html prawie zawsze będzie miało "największy priorytet" -->
+    <h1 style="font-size: 30px;">Witaj na naszej stronie!</h1>
+    <br>
+    <h2 class="classColor" id="idH2" style="margin-top: 20px;">Testujemy!</h2>
+    <h3 class="classColor">Trzeci nagłówek!</h3>
+    <h4>Test</h4>
+    <h5>Test2</h5>
+    <h6>Test3</h6>
+    
+    <div class="classColor" id="myDiv">
+        <p>Tekst próbny</p>
+    </div> 
+    
+    <!-- LINIA -->
+    <hr>
+    
+    <!-- MINI SŁOWNIK - FORMATOWANIE TEKSTU -->
+    <!-- <br> miękki enter, łamanie tekstu, wymuszenie odstępu -->
+    <!-- <strong></strong> i <b></b> pogrubienie treści -->
+    <!-- <sup></sup> indeks górny -->
+    <!-- <sub></sub> - indeks górny -->
+    <!-- <mark></mark> zakreślanie treści -->
+    <!-- <em></em> oraz <i></i> kursywa -->
+    <!-- <s></s> przekreślenie tekstu -->
+    <!-- <small></small> pomniejsze treści -->
+
+
+    <!-- NAGŁÓWEK STRONY -->
+    <header class="container">
+        <p>Lorem ipsum <strong>dolor</strong> sit <b>amet</b>, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et <sup>dolore</sup> magna <sub>aliqua</sub>. Ut enim ad minim veniam, quis nostrud 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <br>
+            <br>
+            Duis aute <mark>irure dolor</mark> in <em>reprehenderit</em> in voluptate velit esse cillum dolore eu 
+            <i>fugiat</i> nulla pariatur. <s>Excepteur</s> sint occaecat cupidatat non proident, sunt in 
+            culpa qui <small>officia</small> deserunt mollit anim id est laborum.</p>
+    </header>
+
+    <hr>
+
+    <!-- CZĘŚĆ GŁÓWNA -->
+    <main class="container">
+
+
+        <section id="listContainer">
+
+            <!-- LISTY -->
+
+            <ol>
+                Lista uporządkowana
+                <li>Element</li>
+                <li>Element</li>
+                <li>Element</li>
+                <li>Element</li>
+                <li>Element</li>
+            </ol>
+
+            <br>
+
+            <ul>
+                Lista nieuporządkowana
+                <li>Element</li>
+                <li>Element</li>
+                <li>Element</li>
+                <li>Element</li>
+                <li>Element</li> 
+            </ul>
+
+        </section>
+
+
+        <!-- MENU/NAWIGACJA I LINKI -->
+
+        <section id="menuContainer">
+
+            <ul>
+                <li>
+                    <a href="https://www.lipsum.com">Lorem ipsum</a> 
+                </li>
+                <li><a href="pages/omnie.html">O mnie</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Portfolio</a></li> 
+            </ul>
+
+        </section>
+
+
+        <!-- LINKI - W NOWYM OKNIE I W TYM OKNIE -->
+        <!-- target="_self" <- otwiera się na tej karcie -->
+        <!-- target="_blank" <- otwiera się w nowej karcie -->
+
+        <section id="linkContainer">
+
+            <a href="https://www.google.pl" target="_self">Tutaj mamy link do Google - otworzy się na tej karcie</a>
+            
+            <br><br>
+            
+            <a href="https://www.google.pl" target="_blank">Tutaj mamy link do Google - otworzy się w nowej karcie</a>
+
+        </section>
+
+
+        <!-- PRZYCISKI/BUTTONY -->
+
+        <section id="buttonContainer">
+            
+            <button>WYŚLIJ</button> 
+
+            <!-- Przycik nr 2: link w środku -->
+            <button><a href="https://www.google.pl" target="_self">WYŚLIJ 2</a></button>
+
+            <!-- Przycik nr 3: przycisk jest linkiem -->
+            <a href="https://www.google.pl" target="_self"><button>WYŚLIJ 3</button></a>
+
+        </section>
+
+        <br>
+
+
+        <!-- WSTAWIANIE ZDJĘĆ/FILMÓW/PLIKÓW PDF -->
+
+        <section id="imgVidContainer">
+
+            <img src="images/forest.jpg" alt="grafika z lasem" class="images">
+
+            <div id="forestImage"></div>
+
+            <video width="100%" height="auto" style="border: solid 1px orange" controls>
+                <source src="https://cdn.jsdelivr.net/npm/big-buck-bunny-1080p@0.0.6/video.mp4" type="video/mp4">
+            </video>
+
+            <iframe src="https://cdn.jsdelivr.net/npm/big-buck-bunny-1080p@0.0.6/video.mp4" type="video/mp4" width="100%"></iframe>
+
+            <div>
+                <embed src="files/Wstęp do programowania - HTML_CSS_JS.pdf" type="application/pdf" width="100%" height="300px"/>
+            </div>
+
+        </section>
+    
+        <!-- TABELE -->
+
+
+        <section id="tableContainer">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Adres</th>
+                            <th>Telefon</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Zamkowa 15</td>
+                            <td>123 456 789</td>
+                            <td>koty@wp.pl</td>
+                        </tr>
+                        <tr>
+                            <td>Zamkowa 15</td>
+                            <td>123 456 789</td>
+                            <td>koty@wp.pl</td>
+                        </tr>
+                        <tr>
+                            <td>Zamkowa 15</td>
+                            <td>123 456 789</td>
+                            <td>koty@wp.pl</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+
+
+        <!-- FORMULARZE -->
+
+        <section id="formContainer">
+
+            <!-- Zwykły, prosty formularz -->
+            <!-- Jeśli chcemy, żeby po kliknięciu przycisku (czy to input czy button) -->
+            <!-- musi być on pomiędzy tagiem <form></form> -->
+            <!-- PRZYCISK NIE MOŻE BYĆ POZA <FORM></FORM> JEŚLI CHCEMY, ŻEBY FORMULARZ ZOSTAŁ WYSŁANY -->
+
+            <form id="easyForm">
+                <label for="firstname">Imię:</label>
+                <input type="text" name="firstname" placeholder="Proszę podać imię"/>
+                <br>
+                <input type="submit" value="Wyślij dane!"/>
+                <br>
+                <button type="submit">Wyślij buttonem</button>
+            </form>
+
+            <!-- WYSŁANIE FORMULARZA NA MAILA -->
+            
+            <form action="mailto:dowolny_email@gmail.com" method="post" id="formBorder">
+                <label for="firstname">Imię:</label> <br>
+                <input type="text" name="firstname" placeholder="Proszę podać imię" class="whiteInput"/>
+                <br><br>
+                <label for="lastname">Nazwisko</label><br>
+                <input type="text" name="lastname" placeholder="Proszę podać nazwisko" class="whiteInput"/>
+                <br>
+                <button type="submit">Wysyłam formularz na maila</button>
+            </form>
+
+
+            <!-- FORMULARZ - NOWE TYPY INPUTÓW -->
+
+            <form action="mailto:dowolny_email@gmail.com" method="post" id="bigForm">
+                <label for="firstname">Imię:</label> <br>
+                <input type="text" name="firstname" placeholder="Proszę podać imię"/>
+                
+                <!-- Jeśli do tagu <input> dopiszemy "required" to formularz będzie wymagał uzupełnienia tego pola -->
+
+                <br><br>
+                
+                <label for="lastname">Nazwisko:</label><br>
+                <input type="text" name="lastname" placeholder="Proszę podać nazwisko"/>
+                
+                <br><br>
+
+                <label for="phoneNumber">Numer telefonu:</label><br>
+                <input type="number" name="phoneNumber" min="9"/>
+                
+                <br><br>
+
+                <label for="phone">Numer telefonu:</label><br>
+                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="Proszę podać nr telefonu 000-000-000"/>
+                
+                <br><br>
+
+                <label for="emailAdress">Email:</label><br>
+                <input type="email" name="emailAdress" placeholder="Pproszę podać swój adres email"/>
+
+                <br><br>
+
+                <label for="passwordCode">Hasło:</label><br>
+                <input type="password" name="passwordCode" placeholder="Pproszę podać hasło"/>
+
+                <br><br>
+
+                <label for="dateNumber">Data:</label><br>
+                <input type="date" name="dateNumber"/>
+
+
+                <!-- WYSYŁANIE FORMULARZA -->
+                <br>
+                <button type="submit" id="btnColor">Wysyłam formularz na maila</button>
+
+            </form>
+
+
+            <!-- FORMULARZ NR 4 - CHECKBOXY/RADIAL/OPTION -->
+
+            <form id="checkForm">
+                <!-- W przypadku checkboxów, radiali i "option" sugeruję zamykanie ich w divach -->
+
+                <!-- Pierwszy div - na checkboxy -->
+
+                <div id="checkDiv">
+                    <h3>Które filmy lubisz?</h2>
+                    <div>
+                        <input type="checkbox" name="movies" value="wp"/>
+                        <label for="wp">Władca Pierścieni</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="movies" value="gladiator"/>
+                        <label for="gladiator">Gladiator</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="movies" value="hp"/>
+                        <label for="hp">Harry Potter</label>
+                    </div>
+                </div>
+
+
+                <!-- Drugi div - na radiale -->
+                <!-- W przypadku radial "name" wpływa na to, że można zaznaczyć tylko jedną odpowiedź -->
+
+                <div id="radialDiv">
+                    <h3>Jaka jest dzisiaj pogoda?</h3>
+                    <div class="radial">
+                        <input type="radio" name="weather" value="sunny"/>
+                        <label for="sunny">Jest słonecznie!</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="weather" value="snow"/>
+                        <label for="snow">Pada śnieg!</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="weather" value="rain"/>
+                        <label for="rain">Pada deszcz!</label>
+                    </div>
+                    <h3>Dziwne zjawiska</h3>
+                    <div>
+                        <input type="radio" name="animals" value="cat"/>
+                        <label for="cat">O, kotek!</label>
+                    </div>
+                </div>
+
+
+                <!-- CHECKBOX I ZAPOMINANIE HASŁA  -->
+
+                <!-- <div id="smallBox">
+                    <div class="passForm">
+                        <input type="checkbox" name="movies" value="hp"/>
+                        <label for="hp">Harry Potter</label>                        
+                    </div>
+                    <div class="passForm">
+                        <a href="#">Ojej, gdzie moje hasło?</a>
+                    </div>
+                </div> -->
+
+
+                <!-- FORMULARZ - OPCJE -->
+
+                <br>
+
+                <h3>Moje ulubione gatunki filmów</h3>
+
+                <label for="movie">Jakie filmy oglądasz?</label>
+                <select name="movie">
+                    <option value="komedie">Komedia</option>
+                    <option value="harrory">Horrory</option>
+                    <option value="bajki">Bajki</option>
+                </select>
+
+
+                <button type="submit">Wyślij</button>
+
+            </form>
+
+                            <!-- CHECKBOX I ZAPOMINANIE HASŁA POZA FORMULARZEM -->
+
+            <div id="smallBox">
+                <div class="passForm">
+                    <input type="checkbox" name="movies" value="hp"/>
+                    <label for="hp">Harry Potter</label>                        
+                </div>
+                <div class="passForm">
+                    <a href="#" target="_blank">Ojej, gdzie moje hasło?</a>
+                </div>
+            </div>
+            
+
+        </section>
+
+        <section class="container" id="mediaQueries">
+            <P>MEDIA QUERIES</P>
+        </section>
+
+
+
+    </main>
+
+
+    <!-- STOPKA -->
+    <footer class="container footerClass">
+        <div></div>
+        <div id="secondDiv">
+            <div></div>
+        </div>
+        <div></div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
